@@ -1,5 +1,7 @@
 package com.zipcodewilmington.danny_do_better_exercises;
 
+import javax.print.DocFlavor;
+
 /**
  * Created by dan on 6/14/17.
  */
@@ -8,81 +10,124 @@ public class StringUtilities {
      * @return `Hello World` as a string
      */
     public static String getHelloWorld() {
-        return null;
+        String x = "Hello World";
+        return x;
     }
 
     /**
-     * @param firstSegment a string to be added to
+     * @param firstSegment  a string to be added to
      * @param secondSegment a string to add
      * @return the concatenation of two strings, `firstSegment`, and `secondSegment`
      */
-    public static String concatenation(String firstSegment, String secondSegment){
-        return null;
+    public static String concatenation(String firstSegment, String secondSegment) {
+        String x = firstSegment + secondSegment;
+        return x;
     }
 
     /**
-     * @param firstSegment a string to be added to
+     * @param firstSegment  a string to be added to
      * @param secondSegment a string to add
      * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
      */
-    public static String concatenation(int firstSegment, String secondSegment){
-        return null;
+    public static String concatenation(int firstSegment, String secondSegment) {
+        String x = firstSegment + secondSegment;
+        return x;
     }
 
     /**
      * @param input a string to be manipulated
      * @return the first 3 characters of `input`
      */
-    public static String getPrefix(String input){
-        return null;
+    public static String getPrefix(String input) {
+        return input.substring(0, 3);
+
     }
 
     /**
      * @param input a string to be manipulated
      * @return the last 3 characters of `input`
      */
-    public static String getSuffix(String input){
-        return null;
+    public static String getSuffix(String input) {
+        String x = "";
+        for(int i = input.length()-3; i<input.length();i++)
+        {
+            x = x + input.charAt(i);
+        }
+        return x;
     }
 
     /**
-     * @param inputValue the value to be compared
+     * @param inputValue      the value to be compared
      * @param comparableValue the value to be compared against
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
-    public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
+    public static Boolean compareTwoStrings(String inputValue, String comparableValue) {
+        if (inputValue == comparableValue) {
+            return true;
+        } else return false;
     }
 
     /**
      * @param inputValue the value input from user
      * @return the middle character of `inputValue`
      */
-    public static Character getMiddleCharacter(String inputValue){
-        return null;
+
+    public static Character getMiddleCharacter(String inputValue) {
+        char letter;
+        if(inputValue.length()%2==0)
+        {
+            int index = inputValue.length()/2 - 1;
+            letter = inputValue.charAt(index);
+        }
+        else
+        {
+            int index = inputValue.length()/2;
+            letter = inputValue.charAt(index);
+        }
+        return letter;
+
+
     }
 
     /**
      * @param spaceDelimitedString a string, representative of a sentence, containing spaces
      * @return the first sequence of characters
      */
-    public static String getFirstWord(String spaceDelimitedString){
-        return null;
+    public static String getFirstWord(String spaceDelimitedString) {
+        String firstword = "";
+        String[] x = spaceDelimitedString.split(" ");
+        firstword = x[0];
+        //for (int i = 0; i < x.length; i++)
+        // {
+        // if (x[i]!=null)
+        // {
+        //    firstword=firstword+x.charAt(i);
+        // }
+        //  }
+        return firstword;
     }
 
     /**
      * @param spaceDelimitedString a string delimited by spaces
      * @return the second word of a string delimited by spaces.
      */
-    public static String getSecondWord(String spaceDelimitedString){
-        return null;
+    public static String getSecondWord(String spaceDelimitedString) {
+        String secondword = "";
+        String[] x = spaceDelimitedString.split(" ");
+        secondword = x[1];
+        return secondword;
+
     }
 
     /**
      * @param stringToReverse
      * @return an identical string with characters in reverse order.
      */
-    public static String reverse(String stringToReverse){
-        return null;
+    public static String reverse(String stringToReverse) {
+        String rev = "";
+        for (int i = stringToReverse.length() - 1; i >= 0; i--) {
+            rev = rev + stringToReverse.charAt(i);
+        }
+        return rev;
     }
 }
